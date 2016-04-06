@@ -2,6 +2,7 @@
   "name": "vue-sortable",
   "description": "A Vue.js project",
   "author": "Jeff Sagal <sagalbot@gmail.com>",
+  "version": "0.1.0",
   "main": "vue-sortable.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",

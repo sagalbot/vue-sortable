@@ -9,13 +9,13 @@
 
 Install using NPM
 
-```
+```bash
 npm install vue-sortable
 ```
 
 Setup
 
-```
+```javascript
 import Vue from 'vue'
 import Sortable from 'vue-sortable'
 

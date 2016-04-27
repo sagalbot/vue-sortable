@@ -35,7 +35,7 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "phantomjs-prebuilt": "^2.1.7",
-    "vue": "^1.0.0",
+    "vue": "^1.0.21",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.2.1",

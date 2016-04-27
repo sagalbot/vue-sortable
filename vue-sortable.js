@@ -13,29 +13,21 @@
   vSortable.config = {}
 
   vSortable.install = function (Vue) {
-    var vSortableIdCounter = 0
-
     Vue.directive('sortable', function (options) {
       options = options || {}
 
-      var vSortableId = options.vSortableId || vSortableIdCounter++
-
-      if (!this.vm.vSortable) {
-        this.vm.vSortable = {}
+      if (!this.vm.sortable) {
+        this.vm.sortable = {}
       }
 
-      // Only throw an error if the user specified the ID, don't fault the user
-      // if they have custom ID's 0 - 10, and the counter is between 0 & 10.
-      if (options.vSortableId && this.vm.vSortable[vSortableId]) {
-        throw new Error('[vue-sortable] cannot set already defined id: \'' + vSortableId + '\'')
-      }
+      var instance = new Sortable(this.el, options)
 
-      while(this.vm.vSortable[vSortableId]) {
-        vSortableId = vSortableIdCounter++
+      //  Throw an error if the given ID is not unique
+      if (this.arg && this.vm.sortable[this.arg]) {
+        console.warn('[vue-sortable] cannot set already defined sortable id: \'' + this.arg + '\'')
+      } else if( this.arg ) {
+        this.vm.sortable[this.arg] = instance
       }
-
-      this.sortable = new Sortable(this.el, options)
-      this.vm.vSortable[vSortableId] = this.sortable
     })
   }
 

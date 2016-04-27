@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-4">
-            <ul class="list-group" v-sortable="{ something: 'else' }">
+            <ul class="list-group" v-sortable>
                 <li class="list-group-item">Foo</li>
                 <li class="list-group-item">Bar</li>
                 <li class="list-group-item">Baz</li>

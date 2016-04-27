@@ -1,6 +1,6 @@
 /* global describe, it, expect */
 
-import Vue from 'Vue'
+import Vue from 'vue'
 import Sortable from '../vue-sortable'
 import sortablejs from 'sortablejs'
 

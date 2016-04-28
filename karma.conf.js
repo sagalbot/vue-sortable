@@ -7,6 +7,7 @@ module.exports = function (config) {
     preprocessors: {
       'test/*.js': ['webpack']
     },
+    singleRun: true,
 
     webpack: {
       // karma watches the test entry points

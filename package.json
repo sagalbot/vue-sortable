@@ -1,6 +1,6 @@
 {
   "name": "vue-sortable",
-  "description": "A Vue.js project",
+  "description": "Easily add drag-and-drop sorting to your Vue.js applications without jQuery, using the v-sortable directive, a thin wrapper for the minimalist RubaXa/SortableJS library.",
   "author": "Jeff Sagal <sagalbot@gmail.com>",
   "version": "0.1.3",
   "main": "vue-sortable.js",

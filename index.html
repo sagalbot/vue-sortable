@@ -99,6 +99,24 @@ Vue.use(Sortable)</code></pre>
             <h4>Basic</h4>
             <basic></basic>
 
+            <h4>Access the Sortable Instance</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>If you need to access the sortable instance itself, you can do so by providing an identifier argument to the directive with the <code>:</code> syntax.</p>
+                    <p>In this example, you could access the sortable instance from within your vm via <code>this.sortable.list</code>.</p>
+                </div>
+
+                <div class="col-md-8">
+                    <pre v-pre><code class="language-markup">&#x3C;ul class=&#x22;list-group&#x22; v-sortable:list&#x3E;
+    &#x3C;li class=&#x22;list-group-item&#x22;&#x3E;Foo&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;list-group-item&#x22;&#x3E;Bar&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;list-group-item&#x22;&#x3E;Baz&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                </div>
+            </div>
+
+
+
             <h4>Further Customization</h4>
             <p>Any arguments that can be passed to
                 <code>new Sortable(el, {})</code> can also be passed to the directive using an object literal. Check the

@@ -2,7 +2,7 @@
   "name": "vue-sortable",
   "description": "A Vue.js project",
   "author": "Jeff Sagal <sagalbot@gmail.com>",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "vue-sortable.js",
   "license": "MIT",
   "scripts": {

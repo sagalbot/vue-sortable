@@ -29,7 +29,7 @@ Note that if you are not compiling Vue yourself, you just need to include `<scri
 
 ## Contributing
 
-I'd like to keep this as directive as simple as possible, but if there's something you'd like to see added feel free to submit a PR.
+I'd like to keep this directive as simple as possible, but if there's something you'd like to see added feel free to submit a PR.
 
 The plugin is built using the vue-cli [webpack-simple template](https://github.com/vuejs-templates/webpack-simple).
 

@@ -6,7 +6,7 @@
   "main": "vue-sortable.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --port 8000",
+    "dev": "webpack-dev-server --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "test": "karma start karma.conf.js",
     "test-watch": "karma start karma.conf.js --single-run false --auto-watch true"

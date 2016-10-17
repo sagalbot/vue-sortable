@@ -12,20 +12,11 @@ describe('vue-sortable', () => {
   });
 
   it('creates the v-sortable directive', () => {
-
     const vm = new Vue({
       template: '<div><ul></ul></div>',
     }).$mount();
 
     expect(typeof vm.$options.directives['sortable']).toEqual('object');
-  });
-
-  it('does not set vm.sortable unless a directive argument is passed', () => {
-    const vm = new Vue({
-      template: '<div><ul v-sortable></ul></div>',
-    }).$mount();
-
-    expect(typeof vm['sortable']).toEqual('undefined');
   });
 
 });

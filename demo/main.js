@@ -1,12 +1,14 @@
 import Vue from 'vue'
-import Basic from './Basic.vue'
-import Custom from './Custom.vue'
-import Data from './Data.vue'
-import Sortable from '../vue-sortable'
 
+import Sortable from '../src/vue-sortable'
 Vue.use(Sortable)
 
+import App from './App.vue'
+
 new Vue({
-  el: 'body',
-  components: { Basic, Custom, Data }
+  el: '#app',
+  components: {App},
+  render(createElement) {
+    return createElement('app')
+  }
 })

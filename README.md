@@ -9,7 +9,7 @@
 Install using NPM
 
 ```bash
-npm install vue-sortable
+npm install vue-sortable --save
 ```
 
 Setup

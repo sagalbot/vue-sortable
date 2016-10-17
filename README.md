@@ -4,7 +4,6 @@
 
 ##### [View Live Demo & Docs](http://sagalbot.github.io/vue-sortable/)
 
-
 ## Installation & Usage
 
 Install using NPM
@@ -23,9 +22,6 @@ Vue.use(Sortable)
 ```
 
 Note that if you are not compiling Vue yourself, you just need to include `<script src="path/to/vue-sortable.js>`, and the plugin will be attached to the window at `window.vSortable`. In this case, you don't need to call `Vue.use()`.
-
-
-
 
 ## Contributing
 

@@ -5,9 +5,10 @@
 ##### [View Live Demo & Docs](http://sagalbot.github.io/vue-sortable/)
 
 
-## Installation & Usage
+Installation
+--
 
-Install using NPM
+#### NPM
 
 ```bash
 npm install vue-sortable
@@ -22,12 +23,74 @@ import Sortable from 'vue-sortable'
 Vue.use(Sortable)
 ```
 
-Note that if you are not compiling Vue yourself, you just need to include `<script src="path/to/vue-sortable.js>`, and the plugin will be attached to the window at `window.vSortable`. In this case, you don't need to call `Vue.use()`.
+#### Browser Globals
 
+If you aren't using a build system, you probably just want to include a `<script>` tag and keep things simple. `unpkg.com` serves as a CDN for NPM projects. You can grab `vue-sortable` from unpkg in a couple ways:
 
+- `<script src="https://unpkg.com/vue-sortable@0.1.3"></script>     # use a specific version`
+- `<script src="https://unpkg.com/vue-sortable@latest"></script>    # use the latest version`
 
+Note that you will need to include `RubaXa/Sortable` & `Vue` before including `vue-sortable`.
 
-## Contributing
+[View Live Example](http://jsbin.com/vasogus/edit?html,js,console,output)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- VueJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+  <!-- SortableJS -->
+  <script src="https://unpkg.com/sortablejs@1.4.2"></script>
+  <!-- VueSortable -->
+  <script src="https://unpkg.com/vue-sortable@0.1.3"></script>
+</head>
+<body>
+    <ul v-sortable>
+      <li>Foo</li>
+      <li>Bar</li>
+      <li>Baz</li>
+    </ul>
+    <script>
+        new Vue({
+          el: 'body'
+        });
+    </script>
+</body>
+</html>
+```
+
+Common Use Cases
+--
+
+#### Update Source Data Order
+
+The below implementation will update the order of the source data after an item is sorted using the `sortable` `onUpdate` callback.
+
+[View Live Example](http://jsbin.com/cicewo/edit?html,js,output)
+
+```
+new Vue({
+  el: 'body',
+  data: {
+    list: ['Foo', 'Bar', 'Baz']
+  },
+  methods: {
+    onUpdate: function (event) {
+      this.list.splice(event.newIndex, 0, this.list.splice(event.oldIndex, 1)[0])
+    }
+  }
+});
+```
+
+```
+<ul v-sortable="{ onUpdate: onUpdate }">
+    <li v-for="item in list">{{ item }}</li>
+ </ul>
+```
+
+Contributing
+--
 
 I'd like to keep this directive as simple as possible, but if there's something you'd like to see added feel free to submit a PR.
 

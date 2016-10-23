@@ -15,6 +15,11 @@
   vSortable.install = function (Vue) {
     Vue.directive('sortable', function (options) {
       options = options || {}
+      
+      if(typeof options.name !== 'undefined') {
+        this.arg = options.name;
+        options = options.options;
+      }
 
       var sortable = new Sortable(this.el, options)
 

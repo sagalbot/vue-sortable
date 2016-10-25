@@ -4,9 +4,12 @@ import Custom from './Custom.vue'
 import Data from './Data.vue'
 import Sortable from '../vue-sortable'
 
-Vue.use(Sortable)
+Vue.use(Sortable);
 
 new Vue({
-  el: 'body',
-  components: { Basic, Custom, Data }
-})
+  components: {
+    'demo-basic': Basic,
+    'demo-custom': Custom,
+    'demo-data': Data
+  }
+}).$mount('#app');

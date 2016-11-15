@@ -13,10 +13,10 @@
   vSortable.config = {}
 
   vSortable.install = function (Vue) {
-    Vue.directive('sortable', function (options) {
+    Vue.directive('sortable', function (el, options) {
       options = options || {}
 
-      var sortable = new Sortable(this.el, options)
+      var sortable = new Sortable(el, options)
 
       if (this.arg && !this.vm.sortable) {
         this.vm.sortable = {}

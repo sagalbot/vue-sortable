@@ -20,7 +20,12 @@ module.exports = function (config) {
             exclude: /node_modules/
           },
         ]
-      }
+      },
+			resolve: {
+			  alias: {
+			    'vue$': 'vue/dist/vue.js'
+			  }
+			}
     },
 
     webpackMiddleware: {

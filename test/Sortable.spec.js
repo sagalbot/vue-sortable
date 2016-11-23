@@ -16,8 +16,7 @@ describe('vue-sortable', () => {
     const vm = new Vue({
       template: '<div><ul></ul></div>',
     }).$mount()
-
-    expect(typeof vm.$options.directives['sortable']).toEqual('function')
+    expect(typeof vm.$options.directives['sortable'].bind).toEqual('function')
   })
 
   it('does not set vm.sortable unless a directive argument is passed', () => {

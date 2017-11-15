@@ -16,7 +16,7 @@
     "url": "https://github.com/sagalbot/vue-sortable.git"
   },
   "dependencies": {
-    "sortablejs": "^1.4.2"
+    "sortablejs": "git://github.com/RubaXa/Sortable.git#passive"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

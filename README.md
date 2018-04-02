@@ -1,6 +1,8 @@
 # Vue Sortable [![Build Status](https://travis-ci.org/sagalbot/vue-sortable.svg?branch=master)](https://travis-ci.org/sagalbot/vue-sortable)
 
 > Easily add drag-and-drop sorting to your Vue.js applications without jQuery, using the v-sortable directive, a thin wrapper for the minimalist [RubaXa/SortableJS](https://github.com/RubaXa/Sortable) library.
+>
+> Please note this library only supports **Vue 1.0**!
 
 ##### [View Live Demo & Docs](http://sagalbot.github.io/vue-sortable/)
 

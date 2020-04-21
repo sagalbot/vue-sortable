@@ -2,8 +2,8 @@
 
   var vSortable = {}
   var Sortable = typeof require === 'function'
-      ? require('sortablejs')
-      : window.Sortable
+    ? require('sortablejs').default
+    : window.Sortable
 
   if (!Sortable) {
     throw new Error('[vue-sortable] cannot locate Sortable.js.')
@@ -15,8 +15,7 @@
   vSortable.install = function (Vue) {
     Vue.directive('sortable', function (options) {
       options = options || {}
-
-      var sortable = new Sortable(this.el, options)
+      var sortable = new Sortable(options)
 
       if (this.arg && !this.vm.sortable) {
         this.vm.sortable = {}
